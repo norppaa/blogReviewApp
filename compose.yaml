@@ -1,0 +1,29 @@
+services:
+  backend:
+    build: backend
+    container_name: backend_service
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+    ports:
+      - 3003:3003
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - database
+
+  frontend:
+    build: frontend
+    container_name: frontend_service
+    restart: unless-stopped
+    ports:
+      - 5173:5173
+    depends_on:
+      - backend
+
+  database:
+    container_name: mongo_database
+    image: mongo:latest
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
