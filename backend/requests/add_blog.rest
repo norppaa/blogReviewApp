@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1a2thIiwiaWQiOiI2NjU2ZmE5MWY5NGI0MjM4ZDA1YzZmM2UiLCJpYXQiOjE3MTY5NzgwNzQsImV4cCI6MTcxNjk4MTY3NH0.Frr3SUKcHhUEGT70BxgA8YvfCd8Xv1xTLUBwPDWopoA
+
+{ 
+  "title": "Kesä on kiva laji",
+  "url": "kukkuu",
+  "likes": 9
+}
+
